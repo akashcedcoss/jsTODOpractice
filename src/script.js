@@ -3,7 +3,9 @@ var array2=[];
 // to add item in todo list
 function addTodo(){
     var todo = document.getElementById('new-task').value; 
+    if(todo != "" && todo != " "){
     array.push(todo);
+    }
     display(array);
 }
 function display(addItem){
@@ -37,7 +39,9 @@ function editTodo(arrEdi){
 function updateTodo(arrUpt){
     document.getElementById('addBtn').style.display="block";
     document.getElementById('updateBtn').style.display="none";
+    if(todo != "" && todo != " "){
     array[arrUpt]=document.getElementById('new-task').value;
+    }
     display(array);
     
 }
